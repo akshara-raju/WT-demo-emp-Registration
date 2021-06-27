@@ -43,14 +43,14 @@
             <br>
 
             <div class="mb-3">
-              <label for="UserName" class="form-label">First Name</label>
-              <input type="text" class="form-control" id="username" placeholder="first name" >
+              <label for="UserName" class="form-label" >First Name</label>
+              <input type="text" class="form-control" id="username" placeholder="first name"  >
               <label id="error1" ></label>
               
             </div>
             <div class="mb-3">
                 <label for="UserName" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lname" placeholder="last name" >
+                <input type="text" class="form-control" id="lname" placeholder="last name"  >
                 <label id="error1" ></label>
                 
               </div>
@@ -142,7 +142,7 @@ let error5 = document.getElementById("error5");
 let error6 = document.getElementById("error6");
 
 // username
-let regexpname= /^([A-Za-z0-9\._]+)$/;
+let regexpname= /^([A-Za-z]+)$/;
 // number
 let regexpnum1= /^([0-9]{10})$/;
 let regexpnum2= /^([0-9]{3}) ([0-9]{3}) ([0-9]{4})$/;
@@ -168,7 +168,7 @@ function nameValidation() {
         }
     
         else {
-            error1.innerHTML="username can have include A-Z , a-z , 0-9 , _ , and . only ";
+            error1.innerHTML="username can only be characters ";
             error1.style.color="red";
             return false;
         }
